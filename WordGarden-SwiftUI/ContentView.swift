@@ -109,12 +109,12 @@ struct ContentView: View {
         revealedWord = ""
         for letter in wordToGuess {
             if lettersGuessed.contains(letter) {
-                revealedWord = revealedWord + String(" \(letter)")
+                revealedWord = revealedWord + String("\(letter) ")
             } else {
-                revealedWord = revealedWord + " _"
+                revealedWord = revealedWord + "_ "
             }
         }
-        revealedWord.removeFirst()
+        revealedWord.removeLast()
         guessedLetter = ""
     }
 }
